@@ -1,0 +1,208 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    font-family: Arial, Tahoma, Serif;
+    color: #000000;
+  }
+
+  nav {
+    display: flex; 
+    padding: 1rem 2rem; 
+    background: #000000; 
+    border: 1px solid #ffffff; 
+  }
+  
+  nav ul {
+    margin-top: 5px;
+    display: flex; 
+    list-style: none; 
+  }
+  
+  nav li {
+    padding-left: 1rem; 
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #ffffff
+  }
+
+  .sidebar{
+    flex: 1;
+    border: 1px solid #ffffff; 
+    background-color: #000000;
+    width: 100px;
+    height: 100vh;
+    padding: 1rem 2rem;
+  }
+
+  .sidebar ul {
+    display: flex; /* 5 */
+    flex-direction: column;
+    row-gap: 20px;
+    list-style: none; /* 6 */
+  }
+  
+  .sidebar li {
+    padding-left: 0.75rem; /* 7! */
+  }
+
+  main {
+    display: flex;
+    background-color: rgb(0, 0, 0);
+
+    
+  }
+  
+  .container{
+    flex: 17;
+  }
+
+  .container-row{
+    flex: 17;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .about{
+    background-color: aqua;
+    background-image: url('https://www.nintendo-difference.com/wp-content/uploads/oldsite/36350/imgs/d713d72f417c2e5e54b53248ebee0189.jpg');
+    background-repeat: no-repeat;
+    width: 90%;
+    margin: 3% 5% 5%;
+    border: 1px solid #ffffff; 
+  }
+
+  .about h1, p, button{
+    margin: 20px;
+  }
+
+  .chiffres{
+    background: url('assets/w.jpeg');
+    background-repeat: no-repeat;
+    width: 90%;
+    margin: 3% 5% 5%;
+    border: 1px solid #ffffff;
+  }
+
+  .chiffres h1, h4, p, button{
+    margin: 20px;
+  }
+
+
+  h2, h4, h5, p{
+    color:#ffffff
+  }
+
+  a:hover, span, h1{
+    color:cyan;
+  }
+
+  button{
+    background-color:#000000;
+    color: white;
+    border: 1px solid #ffffff; 
+  }
+
+  button:hover{
+    background-color:#1a1818;
+    color: rgb(230, 230, 230);
+    border: 1px solid #e6e4e4;
+  }
+
+  .container-stat{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  img{
+    width: 80px;
+    height: 80px;
+  }
+
+  .btn-right{
+    text-align: end !important;
+    margin-left: 80%;
+  }
+
+  .container-allStats{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5%;
+  }
+
+  .container-planetes{
+    display: flex;
+    flex-direction: column;
+    background-image: url('https://www.nintendo-difference.com/wp-content/uploads/oldsite/36350/imgs/d713d72f417c2e5e54b53248ebee0189.jpg');
+    background-repeat: no-repeat;
+    width: 40%;
+    margin: 2% 2% 5%;
+    border: 1px solid #ffffff; 
+  }
+
+  .container-planetes select{
+    width: 30%;
+  }
+
+  .container-planetes h1, select, input, #tableau, p{
+    margin: 20px;
+  }
+
+  .btn-container button{
+    padding: 10px 15px;
+  }
+
+  .flex-column{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .flex-column:nth-child(1){
+    background-color: cadetblue;
+
+  }
+
+  .flex-column h3{
+    margin: 15px 20px;
+  
+    color: white;
+  }
+
+  .btn-container{
+    display: flex;
+    flex-direction: row;
+  }
+
+  #tableau {
+    height: 300px;
+    overflow-y:scroll;
+}
+
+#tableau::-webkit-scrollbar {
+  display: none;
+}
+
+.contenu-affiche{
+    background-image: url('https://www.nintendo-difference.com/wp-content/uploads/oldsite/36350/imgs/d713d72f417c2e5e54b53248ebee0189.jpg');
+    background-repeat: no-repeat;
+    width: 45%;
+    height: 55px;
+    margin: 2% 2% 5%;
+    border: 1px solid #ffffff; 
+}
+
+.contenu-affiche h5{
+  margin: 20px;
+  color: cyan;
+}
+
+  
+
+ 

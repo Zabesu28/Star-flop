@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h2>Space X</h2>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#">Prochaine mission</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Planetes</a></li>
+                <li><a href="#">Vehicules</a></li>
+                <li><a href="#">Personnes</a></li>
+            </ul>
+        </div>
+        <div class="container-row">
+            <section class="container-planetes">
+                <h1>Planètes</h1>
+                <select name="" id="">
+                    <option value="">Par population</option>
+                </select>
+                <input id="search-planete" type="text">
+                <div id="tableau">
+                    <h3>Chargement en cours...</h3>
+                </div>
+                <div class="btn-container">
+                    <button id="previous">Précédent</button>
+                    <button id="next">Suivant</button>
+                </div> 
+                <p id="page"></p>
+                <p id="nbResults"></p>
+                 
+                
+            </section>
+            <section class="contenu-affiche">
+                <h5>Sélectionner le contenu à afficher !</h5>
+            </section>
+        </div>
+    </main>
+    <script src="js/script-planets.js"></script>
+    
+</body>
+</html>
