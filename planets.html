@@ -19,16 +19,19 @@
     <main>
         <div class="sidebar">
             <ul>
-                <li><a href="#">Planetes</a></li>
-                <li><a href="#">Vehicules</a></li>
-                <li><a href="#">Personnes</a></li>
+                <li><a href="planets.html"><img src="assets/icons8-geography-100.png">Planetes</a></li>
+                <li><a href="#"><img src="assets/icons8-rocket-96.png">Vehicules</a></li>
+                <li><a href="#"><img src="assets/icons8-user-100.png">Personnes</a></li>
             </ul>
         </div>
         <div class="container-row">
             <section class="container-planetes">
                 <h1>Planètes</h1>
-                <select name="" id="">
-                    <option value="">Par population</option>
+                <select id="select-planete">
+                    <option value="0">Par population</option>
+                    <option value="1">0 à 100.000</option>
+                    <option value="2">100.000 à 100.000.000</option>
+                    <option value="3">+100.000.000</option>
                 </select>
                 <input id="search-planete" type="text">
                 <div id="tableau">
@@ -43,8 +46,48 @@
                  
                 
             </section>
-            <section class="contenu-affiche">
+            <section id="pas-info" class="contenu-affiche f">
                 <h5>Sélectionner le contenu à afficher !</h5>
+            </section>
+            <section id="info" class="contenu-affiche t none">
+                <h1 id="titre-planete"></h1>
+                <h4 id="population-planete"><span>Population : </span></h4>
+                <div class="parent">
+                        <div class="container-stat div1">
+                            <img src="assets/planet-detail/icons8-circle-100.png" alt="">
+                            <div>
+                                <h4>Diamètre</h4>
+                                <p id="diametre"></p>
+                            </div>
+                        </div>
+                        <div class="container-stat div2">
+                            <img src="assets/planet-detail/icons8-severity-90.png" alt="">
+                            <div>
+                                <h4>Climat</h4>
+                                <p id="climat"></p>
+                            </div>
+                        </div>
+                  
+                        <div class="container-stat div3">
+                            <img src="assets/planet-detail/icons8-magnet-64.png" alt="">
+                            <div>
+                                <h4>Gravité</h4>
+                                <p id="gravite"></p>
+                            </div>
+                        </div>
+                        <div class="container-stat div4">
+                            <img src="assets/planet-detail/icons8-oak-tree-100.png" alt="">
+                            <div>
+                                <h4>Terrain</h4>
+                                <p id="terrain"></p>
+                            </div>
+                        </div>
+                </div>
+                <div class="btn-right">
+                    <button>
+                        <h4>En savoir plus</h4>
+                    </button>
+                </div>
             </section>
         </div>
     </main>
