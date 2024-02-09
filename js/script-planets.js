@@ -18,16 +18,18 @@ let list3;
 
 initListesFilter();
 
-getPlanetes(select.value);
+afficherPlanetes(select.value);
 
+// Initialiser les listes des le debut car l'api est giga lente
 async function initListesFilter(){
+allPlanets = await getAllPlanetes(planetes, allPlanets);
 listPlanets = await getDataByUrl(planetes)
-list1 = await getPlanetesOneList(planetes, list1, 1);
-list2 = await getPlanetesOneList(planetes, list2, 2);
-list3 = await getPlanetesOneList(planetes, list3, 3);
+list1 = getListFilter(allPlanets, 1);
+list2 = getListFilter(allPlanets, 2);
+list3 = getListFilter(allPlanets, 3);
 }
 
-select.addEventListener('change', getPlanetes);
+select.addEventListener('change', afficherPlanetes);
 
 // Page précédente
 
@@ -58,8 +60,6 @@ async function goToNextPage(){
         initPlanets(listPlanets.results);
     }
 }
-
-
 
 async function getDataByUrl(url){
     const response = await fetch(url);
@@ -150,13 +150,12 @@ function initTitleTableau(){
     tableau.appendChild(div);
 }
 
-async function getPlanetes(event){
+async function afficherPlanetes(event){
     idxPage = 1;
     if(event == 0 || event.target.value == 0){
         if(!listPlanets){
             listPlanets = await getDataByUrl(planetes)
-        }
-        
+        } 
         initPlanets(listPlanets.results);
         nbResults.textContent = listPlanets.count + ' résultat(s)'; 
     }
@@ -196,7 +195,7 @@ function getListFilter(list, value){
     });
 }
 
-async function getPlanetesOneList(url, all = [], value) {
+async function getAllPlanetes(url, all = []) {
     const data = await getDataByUrl(url)
 
     all.push(...data.results);
@@ -204,11 +203,9 @@ async function getPlanetesOneList(url, all = [], value) {
     // Vérifier s'il y a une page suivante
     if (data.next) {
         // S'il y a une page suivante, appeler récursivement getAllPlanetes avec l'URL de la page suivante
-        return getPlanetesOneList(data.next, all, value);
+        return getAllPlanetes(data.next, all);
     } else {
         // S'il n'y a pas de page suivante, retourner la liste complète de résultats
-        all = await getListFilter(all, value);
-        return all;
-        
+        return all;  
     }
 }
