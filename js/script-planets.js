@@ -174,8 +174,14 @@ async function getPlanetes(event){
 }
 
 function initLaPlanete(list){
-    initPlanets(list);
-    nbResults.textContent = list.length + ' résultat(s)';
+    if(!list){
+        alert('Les données ne sont pas encore chargé.')
+    }
+    else{
+        initPlanets(list);
+        nbResults.textContent = list.length + ' résultat(s)';
+    }
+    
 }
 
 function getListFilter(list, value){
